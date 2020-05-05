@@ -2,7 +2,6 @@ import tweepy
 import requests
 import json
 from datetime import datetime
-#DateTime==4.3
 
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler("i1Uhg4JlVD9ce3Nq6AVrHHcDx", "chD57OvgbzulKOaUsEFosyFJj0llKIqAJf73oi0XGAbCIUDyHm")
