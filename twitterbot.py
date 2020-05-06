@@ -47,7 +47,7 @@ for day in neosPerDate:
     if int(numberNeos) > day:
         daysGreater += 1
 #Calculate standing in the last calendar week
-numerDaysExceeding = len(neosPerDate) - daysGreater
+numberDaysExceeding = len(neosPerDate) - daysGreater
 #If a monday, nothing to compare to so tweet. Else, figure out what number to use to describe standing
 standing = "most"
 tweeted = False
