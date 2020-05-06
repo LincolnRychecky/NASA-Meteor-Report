@@ -46,8 +46,8 @@ daysGreater = 0
 for day in neosPerDate:
     if int(numberNeos) > day:
         daysGreater += 1
-#Calculate standing in the last calendar week
-numberDaysExceeding = len(neosPerDate) - daysGreater
+#Calculate number of days with more NEOs observed in the last calendar week
+numberDaysExceeding = len(neosPerDate) - daysGreater - 1
 #If a monday, nothing to compare to so tweet. Else, figure out what number to use to describe standing
 standing = "most"
 tweeted = False
@@ -69,5 +69,5 @@ else:
     elif numberDaysExceeding == 6:
         standing = "least"
 if tweeted == False:
-    api.update_status(numberNeos + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + standing + " most active day so far this week!")
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week!")
     tweeted = True
