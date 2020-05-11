@@ -55,6 +55,22 @@ if curDate.weekday() == 0:
     #Create Tweet
     api.update_status(numberNeos + " NEOs passed earth today, " + str(curDate) + ". " + "Not a bad monday in near earth space!")
     tweeted = True
+else if curDate.weekday() == 6:
+    #End of week roundup
+    if numberDaysExceeding == 1:
+        standing = "2nd"
+    elif numberDaysExceeding == 2:
+        standing = "3rd"
+    elif numberDaysExceeding == 3:
+        standing = "4th"
+    elif numberDaysExceeding == 4:
+        standing = "5th"
+    elif numberDaysExceeding == 5:
+        standing = "6th"
+    elif numberDaysExceeding == 6:
+        standing = "least"
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week! Now its time for the sunday roundup. This week " + parsed_json_two['element_count'] + " total NEOs were detected by NASA instruments!")
+    tweeted = True
 else:
     if numberDaysExceeding == 1:
         standing = "2nd"
