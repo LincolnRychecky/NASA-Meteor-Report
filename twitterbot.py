@@ -53,9 +53,9 @@ standing = "most"
 tweeted = False
 if curDate.weekday() == 0:
     #Create Tweet
-    api.update_status(numberNeos + " NEOs passed earth today, " + str(curDate) + ". " + "Not a bad monday in near earth space!")
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "Not a bad monday in near earth space!")
     tweeted = True
-else if curDate.weekday() == 6:
+elif curDate.weekday() == 6:
     #End of week roundup
     if numberDaysExceeding == 1:
         standing = "2nd"
