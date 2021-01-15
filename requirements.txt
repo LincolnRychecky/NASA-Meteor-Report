@@ -1,4 +1,4 @@
-tweepy==3.8.0
-requests==2.23.0
+tweepy==3.10.0
+requests==2.25.1
 requests-oauthlib==1.3.0
 DateTime==4.3
