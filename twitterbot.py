@@ -79,7 +79,7 @@ standing = "most"
 tweeted = False
 if curDate.weekday() == 0:
     #Create Tweet
-    #api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "Not a bad monday in near earth space!")
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "Not a bad monday in near earth space!")
     tweeted = True
 elif curDate.weekday() == 6:
     #End of week roundup
@@ -95,7 +95,7 @@ elif curDate.weekday() == 6:
         standing = "6th"
     elif numberDaysExceeding == 6:
         standing = "least"
-    #api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week! Now its time for the sunday roundup. This week " + parsed_json_two['element_count'] + " total NEOs were detected by NASA instruments!")
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week! Now its time for the sunday roundup. This week " + parsed_json_two['element_count'] + " total NEOs were detected by NASA instruments!")
     tweeted = True
 else:
     if numberDaysExceeding == 1:
@@ -111,7 +111,7 @@ else:
     elif numberDaysExceeding == 6:
         standing = "least"
 if tweeted == False:
-    #api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week!")
+    api.update_status(str(numberNeos) + " NEOs passed earth today, " + str(curDate) + ". " + "That is the " + str(standing) + " most active day so far this week!")
     tweeted = True
 
 retweetAccount("@apod", api)
